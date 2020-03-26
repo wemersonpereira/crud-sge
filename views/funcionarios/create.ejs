@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+
+
+<h1>Novo Funcionário</h1>
+<p><a href="/funcionarios">Voltar a lista de funcionários</a></p>
+
+<form method="post">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+  </div>
+  <div class="form-group">
+    <label for="cpf">CPF</label>
+    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="insira seu CPF (somente números)">
+  </div>
+  <div class="form-group">
+    <label for="matricula">Matricula</label>
+    <input type="number" class="form-control" id="matricula" name="matricula" placeholder="Matricula">
+  </div>
+  <div class="form-group">
+    <label for="funcao">Função</label>
+    <input type="text" class="form-control" id="funcao" name="funcao" placeholder="Função">
+  </div>
+ 
+  <button type="submit" class="btn btn-success">Salvar</button>
+</form>
+
+<%- include ("../partials/footer") %>

@@ -1,0 +1,23 @@
+<%- include("../partials/header") %>
+
+<h1>Editar Linha</h1>
+<p><a href="/linhas">Voltar a lista de linhas</a></p>
+
+<form method="post">
+  <div class="form-group">
+    <label for="numero">Número</label>
+    <input type="number" class="form-control" id="numero" name="numero" placeholder="Número" value="<%= linha.numero %>">
+  </div>
+  <div class="form-group">
+    <label for="operadora">Operadora</label>
+    <input type="text" class="form-control" id="operadora" name="operadora" placeholder="Operadora" value="<%= linha.operadora %>">
+  </div>
+  <div class="form-group">
+    <label for="ddd">DDD</label>
+    <input type="number" class="form-control" id="ddd" name="DDD" placeholder="DDD" value="<%= linha.DDD %>">
+  </div>
+ 
+  <button type="submit" class="btn btn-success">Salvar</button>
+</form>
+
+<%- include ("../partials/footer") %>

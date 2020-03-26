@@ -1,0 +1,32 @@
+<%- include("../partials/header") %>
+
+<h1>Smartphones</h1>
+<p><a href="/smartphones/create">Novo smartphone</a></p>
+<table class="table table-sm table-striped table-hover table-bordered">
+  <tr>
+    <th>Código</th>
+    <th>Marca</th>
+    <th>Modelo</th>
+    <th>IMEI</th>
+    <th>Ações</th>
+  </tr>
+  <% smartphones.map( smartphones => { %>
+  <tr>
+  <td><%= smartphones.idsmartphones %></td>
+    <td><%= smartphones.marca %></td>
+    <td><%= smartphones.modelo %></td>
+    <td><%= smartphones.IMEI %></td>
+    <td>
+      <div class="btn-group" role="group" aria-label="...">
+        <a type="button" class="btn btn-primary" href="/smartphones/update/<%= smartphones.idsmartphones %>">Editar</a>
+        <a type="button" class="btn btn-danger"
+         href="/smartphones/delete/<%= smartphones.idsmartphones %>"
+         onclick="return confirm('Deseja excluir?')" >Excluir</a>
+      </div>
+
+    </td>
+  </tr>
+    <% }) %>
+</table>
+
+<%- include ("../partials/footer") %>
